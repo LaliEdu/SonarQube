@@ -1,7 +1,7 @@
 # Snyk + SonarQube
 ## Ferramentas de Seguranca e Qualidade no DevSecOps
 
-**Trabalho da disciplina de Engenharia de Software — Curso de Ciencia da Computacao**  
+**Trabalho da disciplina de Engenharia de Software — Curso de Engenharia De Software**  
 Tema da aula: **DevSecOps** | Ferramentas escolhidas: **Snyk** e **SonarQube**
 
 ---
