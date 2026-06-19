@@ -145,4 +145,4 @@ Recomendamos o uso de ambas as ferramentas em projetos de médio e grande porte,
 * [Snyk: Developer-first security](https://about.snyk.io/)
 * [GitHub Actions — Documentação](https://github.com/features/actions)
 * [What is DevSecOps? — DevOps.com](https://devops.com/what-is-devsecops/)
-* Material gerado durante a etapa de instalação e testes práticos.
+* [Material gerado durante a etapa de instalação e testes práticos](https://docs.google.com/document/d/19fd-NdfAgCPUOqKqsN2uQ8wOY7gzLmBPpQFvUQEKFak/edit?usp=sharing)
