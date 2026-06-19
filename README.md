@@ -1,8 +1,13 @@
 # Snyk + SonarQube
 ## Ferramentas de Seguranca e Qualidade no DevSecOps
 
+<<<<<<< HEAD
 **Trabalho da disciplina de Engenharia de Software — Ferramentas: **Snyk** e **SonarQube**  
 Tema da aula: **DevSecOps** | Turma: **Sexta-feira**
+=======
+**Trabalho da disciplina de Engenharia de Software — Curso de Engenharia De Software**  
+Tema da aula: **DevSecOps** | Ferramentas escolhidas: **Snyk** e **SonarQube**
+>>>>>>> 35a724e6a711c9c23578805e3c9a790fdada759b
 
 ---
 
@@ -107,6 +112,7 @@ Para esta demonstracao, utilizamos a versao **SonarCloud** (SaaS), dispensando a
     args: >
       -Dsonar.projectKey=seu-projeto
       -Dsonar.organization=sua-organizacao
+<<<<<<< HEAD
 
 ## Exemplo de Demonstracao Funcional
 
@@ -192,3 +198,5 @@ O trabalho demonstrou que **Snyk** e **SonarQube** sao ferramentas **complementa
 Tema: **DevSecOps** — Snyk + SonarQube  
 Turma: **Sexta-feira**  
 © 2026 — Todos os direitos reservados
+=======
+>>>>>>> 35a724e6a711c9c23578805e3c9a790fdada759b
