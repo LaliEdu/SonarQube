@@ -1,202 +1,155 @@
 # Snyk + SonarQube
-## Ferramentas de Seguranca e Qualidade no DevSecOps
+## Ferramentas de Segurança e Qualidade no DevSecOps
 
-<<<<<<< HEAD
-**Trabalho da disciplina de Engenharia de Software — Ferramentas: **Snyk** e **SonarQube**  
-Tema da aula: **DevSecOps** | Turma: **Sexta-feira**
-=======
-**Trabalho da disciplina de Engenharia de Software — Curso de Engenharia De Software**  
-Tema da aula: **DevSecOps** | Ferramentas escolhidas: **Snyk** e **SonarQube**
->>>>>>> 35a724e6a711c9c23578805e3c9a790fdada759b
+> 🎓 **Trabalho da disciplina de Engenharia de Software** > **Ferramentas:** Snyk e SonarQube | **Tema:** DevSecOps | **Turma:** Sexta-feira
 
 ---
 
-## Sumario
+## Sumário
 
-- [Introducao](#introducao)
+- [Introdução](#introdução)
 - [Sobre as Ferramentas](#sobre-as-ferramentas)
 - [Comparativo: Snyk vs SonarQube](#comparativo-snyk-vs-sonarqube)
-- [Instalacao e Configuracao](#instalacao-e-configuracao)
-- [Exemplo de Demonstracao Funcional](#exemplo-de-demonstracao-funcional)
-- [Resultados da Analise](#resultados-da-analise)
+- [Instalação e Configuração](#instalação-e-configuração)
+- [Exemplo de Demonstração Funcional](#exemplo-de-demonstração-funcional)
 - [Dificuldades Encontradas](#dificuldades-encontradas)
-- [Conclusao](#conclusao)
-- [Referencias](#referencias)
+- [Conclusão](#conclusão)
+- [Referências](#referências)
 
 ---
 
-## Introducao
+## Introdução
 
-**DevSecOps** e a pratica de integrar a seguranca ao ciclo de vida do desenvolvimento de software, desde a concepcao ate a producao. O conceito de **"Shift Left"** (deslocar para a esquerda) propoe que a seguranca seja considerada nas fases iniciais do desenvolvimento, em vez de ser uma etapa final e isolada.
+**DevSecOps** é a prática de integrar a segurança ao ciclo de vida do desenvolvimento de software, desde a concepção até a produção. O conceito de **"Shift Left"** (deslocar para a esquerda) propõe que a segurança seja considerada nas fases iniciais do desenvolvimento, em vez de ser uma etapa final e isolada.
 
-Neste trabalho, exploramos duas ferramentas essenciais para o ecossistema DevSecOps: **Snyk** (focado em seguranca de dependencias e containers) e **SonarQube** (focado em qualidade e analise estatica de codigo).
+Neste trabalho, exploramos duas ferramentas essenciais para o ecossistema DevSecOps: **Snyk** (focado em segurança de dependências e containers) e **SonarQube** (focado em qualidade e análise estática de código).
 
-> **Objetivo:** Demonstrar como essas ferramentas se complementam para garantir que o codigo seja nao apenas funcional, mas tambem seguro, limpo e de facil manutencao.
+> 🎯 **Objetivo:** Demonstrar como essas ferramentas se complementam para garantir que o código seja não apenas funcional, mas também seguro, limpo e de fácil manutenção.
 
 ---
 
 ## Sobre as Ferramentas
 
-### SonarQube
+### 🔹 SonarQube
 
-O **SonarQube** e uma plataforma open source criada em 2006 por Olivier Gaudin, Freddy Mallet e Simon Brandhof. Inicialmente chamado apenas de "Sonar", foi desenvolvido para preencher a lacuna de ferramentas que analisassem automaticamente a qualidade do codigo durante o desenvolvimento.
+O **SonarQube** é uma plataforma open source criada em 2006 por Olivier Gaudin, Freddy Mallet e Simon Brandhof. Inicialmente chamado apenas de "Sonar", foi desenvolvido para preencher a lacuna de ferramentas que analisassem automaticamente a qualidade do código durante o desenvolvimento.
 
-Mantido atualmente pela empresa **SonarSource**, o SonarQube realiza analise estatica de codigo, identificando:
+Mantido atualmente pela empresa **SonarSource**, o SonarQube realiza análise estática de código, identificando:
 
-- **Bugs:** problemas que podem causar comportamento incorreto do software.
-- **Vulnerabilidades:** falhas de seguranca no codigo-fonte.
-- **Code Smells:** trechos de codigo que dificultam a manutencao e compreensao.
-- **Metricas:** cobertura de testes, duplicacao de codigo e divida tecnica.
+* **Bugs:** problemas que podem causar comportamento incorreto do software.
+* **Vulnerabilidades:** falhas de segurança no código-fonte.
+* **Code Smells:** trechos de código que dificultam a manutenção e compreensão.
+* **Métricas:** cobertura de testes, duplicação de código e dívida técnica.
 
-> **Curiosidade:** O SonarQube suporta mais de **30 linguagens** de programacao, incluindo Java, Python, JavaScript, C#, C++, Go e TypeScript.
+> 💡 **Curiosidade:** O SonarQube suporta mais de **30 linguagens** de programação, incluindo Java, Python, JavaScript, C#, C++, Go e TypeScript.
 
-### Snyk
+### 🔹 Snyk
 
-O **Snyk** e uma plataforma de seguranca nativa em nuvem, fundada em 2015 por Guy Podjarny, Assaf Hefetz e Danny Grander. A ferramenta foi criada com a filosofia **"Developer First"** (primeiro o desenvolvedor), tornando a seguranca acessivel e acionavel para quem escreve o codigo.
+O **Snyk** é uma plataforma de segurança nativa em nuvem, fundada em 2015 por Guy Podjarny, Assaf Hefetz e Danny Grander. A ferramenta foi criada com a filosofia **"Developer First"** (primeiro o desenvolvedor), tornando a segurança acessível e acionável para quem escreve o código.
 
-O Snyk atua em multiplas frentes:
+O Snyk atua em múltiplas frentes:
 
-- **Snyk Open Source (SCA):** Escaneia dependencias e bibliotecas de terceiros em busca de vulnerabilidades conhecidas (CVEs).
-- **Snyk Code (SAST):** Analisa o codigo-fonte em busca de falhas de seguranca usando IA (DeepCode AI).
-- **Snyk Container:** Verifica imagens Docker em busca de vulnerabilidades em pacotes do sistema operacional.
-- **Snyk IaC:** Avalia arquivos de infraestrutura como codigo (Terraform, Kubernetes, CloudFormation).
+* **Snyk Open Source (SCA):** Escaneia dependências e bibliotecas de terceiros em busca de vulnerabilidades conhecidas (CVEs).
+* **Snyk Code (SAST):** Analisa o código-fonte em busca de falhas de segurança usando IA (DeepCode AI).
+* **Snyk Container:** Verifica imagens Docker em busca de vulnerabilidades em pacotes do sistema operacional.
+* **Snyk IaC:** Avalia arquivos de infraestrutura como código (Terraform, Kubernetes, CloudFormation).
 
-> **Diferencial:** O Snyk e conhecido por gerar **Pull Requests automaticos** com as correcoes sugeridas para vulnerabilidades em dependencias.
+> 🚀 **Diferencial:** O Snyk é conhecido por gerar **Pull Requests automáticos** com as correções sugeridas para vulnerabilidades em dependências.
 
 ---
 
 ## Comparativo: Snyk vs SonarQube
 
-Embora ambas sejam ferramentas de seguranca, elas atuam em camadas diferentes e sao **complementares**. Enquanto o SonarQube cuida da **qualidade interna** do codigo, o Snyk protege a **cadeia de suprimentos** (dependencias externas e containers).
+Embora ambas sejam ferramentas de segurança, elas atuam em camadas diferentes e são **complementares**. Enquanto o SonarQube cuida da **qualidade interna** do código, o Snyk protege a **cadeia de suprimentos** (dependências externas e containers).
 
-| Criterio | Snyk | SonarQube |
+| Critério | Snyk | SonarQube |
 | :--- | :--- | :--- |
-| **Foco principal** | Seguranca de aplicacoes (AppSec) | Qualidade de codigo + SAST |
-| **Especialidade** | SCA (dependencias), containers e IaC | Analise estatica (logica, bugs, manutenibilidade) |
-| **Abordagem** | "Corrija esta vulnerabilidade especifica" | "Melhore a estrutura e seguranca do seu codigo" |
-| **Remediacao** | Pull Requests automaticos | Sugestoes de refatoracao |
+| **Foco principal** | Segurança de aplicações (AppSec) | Qualidade de código + SAST |
+| **Especialidade** | SCA (dependências), containers e IaC | Análise estática (lógica, bugs, manutenibilidade) |
+| **Abordagem** | "Corrija esta vulnerabilidade específica" | "Melhore a estrutura e segurança do seu código" |
+| **Remediação** | Pull Requests automáticos | Sugestões de refatoração |
 | **Modelo** | SaaS (nuvem) ou Broker | Self-Hosted ou SaaS (SonarCloud) |
-| **Plano gratuito** | Sim (com limitacoes) | Community Edition (completa) |
+| **Plano gratuito** | Sim (com limitações) | Community Edition (completa) |
 
 ### Por que usar ambos?
 
 Em um pipeline de DevSecOps maduro, as ferramentas se complementam:
 
-- **SonarQube** -> Primeira linha de defesa. Evita que o desenvolvedor cometa erros de logica, seguranca ou boas praticas no codigo que ele mesmo escreve.
-- **Snyk** -> Especialista em cadeia de suprimentos. Garante que as bibliotecas externas utilizadas nao tragam vulnerabilidades conhecidas para o projeto.
+* **SonarQube** -> Primeira linha de defesa. Evita que o desenvolvedor cometa erros de lógica, segurança ou boas práticas no código que ele mesmo escreve.
+* **Snyk** -> Especialista em cadeia de suprimentos. Garante que as bibliotecas externas utilizadas não tragam vulnerabilidades conhecidas para o projeto.
 
-> **Cenario ideal:** **SNYK** + **SONARQUBE** trabalhando juntos no pipeline CI/CD.
+> ✨ **Cenário ideal:** **SNYK** + **SONARQUBE** trabalhando juntos no pipeline CI/CD.
 
 ---
 
-## Instalacao e Configuracao
+## Instalação e Configuração
 
-### Instalacao do SonarQube
+### Instalação do SonarQube
 
-Para esta demonstracao, utilizamos a versao **SonarCloud** (SaaS), dispensando a instalacao de um servidor local. O SonarCloud e gratuito para repositorios publicos e se integra nativamente ao GitHub.
+Para esta demonstração, utilizamos a versão **SonarCloud** (SaaS), dispensando a instalação de um servidor local. O SonarCloud é gratuito para repositórios públicos e se integra nativamente ao GitHub.
 
 **Passos realizados:**
 
 1. Acessar [sonarcloud.io](https://sonarcloud.io) e fazer login com a conta GitHub.
-2. Clicar em **"Analyze new project"** e selecionar o repositorio desejado.
-3. Configurar o **Quality Gate** (criterios minimos de qualidade).
-4. Obter o **SONAR_TOKEN** para integracao com o pipeline.
+2. Clicar em **"Analyze new project"** e selecionar o repositório desejado.
+3. Configurar o **Quality Gate** (critérios mínimos de qualidade).
+4. Obter o **SONAR_TOKEN** para integração com o pipeline.
 
-```yaml
-# Exemplo de configuracao no GitHub Actions
-- name: SonarQube Scan
-  uses: SonarSource/sonarcloud-github-action@v2
-  env:
-    SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-  with:
-    args: >
-      -Dsonar.projectKey=seu-projeto
-      -Dsonar.organization=sua-organizacao
-<<<<<<< HEAD
+## 💻 Exemplo de Demonstração Funcional
 
-## Exemplo de Demonstracao Funcional
+Para a demonstração, foi analisado um projeto real: um site de denúncia sobre infraestrutura em Palmas, desenvolvido como projeto final de um curso técnico.
 
-Para a demonstracao, foi analisado um projeto real: um site de denuncia sobre infraestrutura em Palmas, desenvolvido como projeto final de um curso tecnico.
-
-O fluxo da demonstracao foi:
-
+O fluxo da demonstração foi estruturado nos seguintes passos:
 1. Criar o projeto local no SonarQube.
 2. Rodar o scanner na pasta do projeto.
-3. Visualizar o relatorio gerado no dashboard.
+3. Visualizar o relatório gerado no dashboard.
 
-![Desmonstrção Funcional do SonarQube](demonstracao.png)
-
-
+> 📸 **Nota:** O resultado visual desta etapa e a validação do dashboard podem ser conferidos no arquivo `Captura de tela 2026-06-19 154433.png`.
 
 ---
 
-## Dificuldades Encontradas
+## ⚠️ Dificuldades Encontradas
 
-### 1. Configuracao do GitHub App (A mais trabalhosa)
+### 1. Configuração do GitHub App *(A mais trabalhosa)*
+* **Erro:** `Missing permissions (pull_requests: null, checks: null)`
+* **Solução:** Ajustar as permissões para **Read & Write** nas configurações do GitHub App.
+* **Erro:** `redirect_uri not associated`
+* **Solução:** Adicionar `http://localhost:9000/oauth2/callback/github` no campo **Callback URL**.
 
-**Erro:** Missing permissions (pull_requests: null, checks: null)
-
-**Solucao:** Ajustar permissoes para Read & Write no GitHub App
-
-**Erro:** redirect_uri not associated
-
-**Solucao:** Adicionar http://localhost:9000/oauth2/callback/github no campo Callback URL
-
----
-
-### 2. Comunicacao Docker com Windows (A mais tecnica)
-
-**Erro:** Failed to query server version (nao achava o SonarQube)
-
-**Solucao:** Descobrir que o Docker no WSL2 tem IP proprio (172.23.99.192) e usar ele no lugar do localhost
-
----
+### 2. Comunicação Docker com Windows *(A mais técnica)*
+* **Erro:** `Failed to query server version` (o sistema não encontrava o SonarQube).
+* **Solução:** Descobrir que o Docker no WSL2 possui um IP próprio (`172.23.99.192`) e utilizá-lo no comando no lugar do `localhost`.
 
 ### 3. Erros de Sintaxe no Comando
-
-**Erro:** Unrecognized option: .projectKey
-
-**Solucao:** Corrigir a digitacao do comando (faltava um D)
-
----
+* **Erro:** `Unrecognized option: .projectKey`
+* **Solução:** Corrigir a digitação do comando enviado ao terminal (faltava o prefixo `-D`).
 
 ### 4. Interface pouco intuitiva do SonarQube
-
-**Dificuldade:** Nao achar onde importar repositorio ou testar configuracao
-
-**Solucao:** Explorar menus (Administration -> DevOps Platform Integrations -> GitHub)
+* **Dificuldade:** Encontrar onde importar o repositório ou testar a configuração inicial.
+* **Solução:** Explorar os menus internos seguindo o caminho: `Administration` ➔ `DevOps Platform Integrations` ➔ `GitHub`.
 
 ---
 
-## Conclusao
+## 🎯 Conclusão
 
-O trabalho demonstrou que **Snyk** e **SonarQube** sao ferramentas **complementares** e essenciais em um ambiente DevSecOps maduro:
+O trabalho demonstrou que o **Snyk** e o **SonarQube** são ferramentas complementares e essenciais em um ambiente DevSecOps maduro:
 
-- **SonarQube** e a ferramenta ideal para garantir a **qualidade interna** do codigo, detectando bugs, vulnerabilidades e code smells no codigo-fonte.
-- **Snyk** e especialista em **seguranca da cadeia de suprimentos**, protegendo o projeto contra vulnerabilidades em dependencias, containers e infraestrutura como codigo.
+* **SonarQube:** É a ferramenta ideal para garantir a **qualidade interna** do código, detectando bugs, vulnerabilidades e *code smells* diretamente no código-fonte.
+* **Snyk:** É especialista na **segurança da cadeia de suprimentos**, protegendo o projeto contra vulnerabilidades em dependências, containers e infraestrutura como código (IaC).
 
-**Recomendamos o uso de ambas as ferramentas** em projetos de medio e grande porte, especialmente aqueles desenvolvidos em equipe, onde garantir a seguranca e a evolucao sustentavel do software e essencial. O investimento em configuracao e aprendizado e compensado pela **reducao de riscos** e pela **automacao** da deteccao de problemas.
+Recomendamos o uso de ambas as ferramentas em projetos de médio e grande porte, especialmente aqueles desenvolvidos em equipe, onde garantir a segurança e a evolução sustentável do software é essencial. O investimento em configuração e aprendizado é amplamente compensado pela **redução de riscos** e pela **automação** da detecção de problemas.
 
-> **Mensagem final:** No DevSecOps, a seguranca nao e uma etapa final — e um processo continuo que comeca na primeira linha de codigo.
-
----
-
-## Referencias
-
-- [SonarQube — Site oficial](https://www.sonarsource.com/products/sonarqube/)
-- [Documentacao oficial do SonarQube](https://docs.sonarqube.org/latest/)
-- [Snyk — Site oficial](https://snyk.io/)
-- [Documentacao oficial do Snyk](https://docs.snyk.io/)
-- [Snyk: Developer-first security](https://about.snyk.io/)
-- [GitHub Actions — Documentacao](https://github.com/features/actions)
-- [What is DevSecOps? — DevOps.com](https://devops.com/what-is-devsecops/)
-- Material gerado durante a etapa de instalacao e testes praticos.
+> 🛡️ **Mensagem final:** No DevSecOps, a segurança não é uma etapa final — é um processo contínuo que começa na primeira linha de código.
 
 ---
 
-**Trabalho de Engenharia de Software — Curso de Ciencia da Computacao**  
-Tema: **DevSecOps** — Snyk + SonarQube  
-Turma: **Sexta-feira**  
-© 2026 — Todos os direitos reservados
-=======
->>>>>>> 35a724e6a711c9c23578805e3c9a790fdada759b
+## 📚 Referências
+
+* [SonarQube — Site oficial](https://www.sonarsource.com/products/sonarqube/)
+* [Documentação oficial do SonarQube](https://docs.sonarqube.org/latest/)
+* [Snyk — Site oficial](https://snyk.io/)
+* [Documentação oficial do Snyk](https://docs.snyk.io/)
+* [Snyk: Developer-first security](https://about.snyk.io/)
+* [GitHub Actions — Documentação](https://github.com/features/actions)
+* [What is DevSecOps? — DevOps.com](https://devops.com/what-is-devsecops/)
+* Material gerado durante a etapa de instalação e testes práticos.
