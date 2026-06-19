@@ -1,9 +1,8 @@
 # Snyk + SonarQube
 ## Ferramentas de Segurança e Qualidade no DevSecOps
 
-> 🎓 **Trabalho da disciplina de Engenharia de Software** > **Ferramentas:** Snyk e SonarQube | **Tema:** DevSecOps | **Turma:** Sexta-feira
+>**Trabalho da disciplina de Engenharia de Software** > **Ferramentas:** Snyk e SonarQube | **Tema:** DevSecOps | **Turma:** Sexta-feira
 
----
 
 ## Sumário
 
@@ -16,7 +15,6 @@
 - [Conclusão](#conclusão)
 - [Referências](#referências)
 
----
 
 ## Introdução
 
@@ -24,9 +22,8 @@
 
 Neste trabalho, exploramos duas ferramentas essenciais para o ecossistema DevSecOps: **Snyk** (focado em segurança de dependências e containers) e **SonarQube** (focado em qualidade e análise estática de código).
 
-> 🎯 **Objetivo:** Demonstrar como essas ferramentas se complementam para garantir que o código seja não apenas funcional, mas também seguro, limpo e de fácil manutenção.
+> **Objetivo:** Demonstrar como essas ferramentas se complementam para garantir que o código seja não apenas funcional, mas também seguro, limpo e de fácil manutenção.
 
----
 
 ## Sobre as Ferramentas
 
@@ -41,7 +38,7 @@ Mantido atualmente pela empresa **SonarSource**, o SonarQube realiza análise es
 * **Code Smells:** trechos de código que dificultam a manutenção e compreensão.
 * **Métricas:** cobertura de testes, duplicação de código e dívida técnica.
 
-> 💡 **Curiosidade:** O SonarQube suporta mais de **30 linguagens** de programação, incluindo Java, Python, JavaScript, C#, C++, Go e TypeScript.
+> **Curiosidade:** O SonarQube suporta mais de **30 linguagens** de programação, incluindo Java, Python, JavaScript, C#, C++, Go e TypeScript.
 
 ### 🔹 Snyk
 
@@ -54,9 +51,9 @@ O Snyk atua em múltiplas frentes:
 * **Snyk Container:** Verifica imagens Docker em busca de vulnerabilidades em pacotes do sistema operacional.
 * **Snyk IaC:** Avalia arquivos de infraestrutura como código (Terraform, Kubernetes, CloudFormation).
 
-> 🚀 **Diferencial:** O Snyk é conhecido por gerar **Pull Requests automáticos** com as correções sugeridas para vulnerabilidades em dependências.
+> **Diferencial:** O Snyk é conhecido por gerar **Pull Requests automáticos** com as correções sugeridas para vulnerabilidades em dependências.
 
----
+
 
 ## Comparativo: Snyk vs SonarQube
 
@@ -106,11 +103,11 @@ O fluxo da demonstração foi estruturado nos seguintes passos:
 
 ![Demonstração Funcional](demonstracao.png)
 
-> 📸 **Nota:** O resultado visual desta etapa e a validação do dashboard podem ser conferidos no arquivo `Captura de tela 2026-06-19 154433.png`.
+> **Nota:** O resultado visual desta etapa e a validação do dashboard podem ser conferidos no arquivo `Captura de tela 2026-06-19 154433.png`.
 
 ---
 
-## ⚠️ Dificuldades Encontradas
+##  Dificuldades Encontradas
 
 ### 1. Configuração do GitHub App *(A mais trabalhosa)*
 * **Erro:** `Missing permissions (pull_requests: null, checks: null)`
@@ -118,7 +115,7 @@ O fluxo da demonstração foi estruturado nos seguintes passos:
 * **Erro:** `redirect_uri not associated`
 * **Solução:** Adicionar `http://localhost:9000/oauth2/callback/github` no campo **Callback URL**.
 
-### 2. Comunicação Docker com Windows *(A mais técnica)*
+### 2. Comunicação Docker com Windows *(muito técnica)*
 * **Erro:** `Failed to query server version` (o sistema não encontrava o SonarQube).
 * **Solução:** Descobrir que o Docker no WSL2 possui um IP próprio (`172.23.99.192`) e utilizá-lo no comando no lugar do `localhost`.
 
@@ -130,9 +127,7 @@ O fluxo da demonstração foi estruturado nos seguintes passos:
 * **Dificuldade:** Encontrar onde importar o repositório ou testar a configuração inicial.
 * **Solução:** Explorar os menus internos seguindo o caminho: `Administration` ➔ `DevOps Platform Integrations` ➔ `GitHub`.
 
----
-
-## 🎯 Conclusão
+## Conclusão
 
 O trabalho demonstrou que o **Snyk** e o **SonarQube** são ferramentas complementares e essenciais em um ambiente DevSecOps maduro:
 
@@ -143,9 +138,8 @@ Recomendamos o uso de ambas as ferramentas em projetos de médio e grande porte,
 
 > 🛡️ **Mensagem final:** No DevSecOps, a segurança não é uma etapa final — é um processo contínuo que começa na primeira linha de código.
 
----
 
-## 📚 Referências
+## Referências
 
 * [SonarQube — Site oficial](https://www.sonarsource.com/products/sonarqube/)
 * [Documentação oficial do SonarQube](https://docs.sonarqube.org/latest/)
