@@ -104,6 +104,8 @@ O fluxo da demonstração foi estruturado nos seguintes passos:
 2. Rodar o scanner na pasta do projeto.
 3. Visualizar o relatório gerado no dashboard.
 
+![Demonstração Funcional](demonstracao.png)
+
 > 📸 **Nota:** O resultado visual desta etapa e a validação do dashboard podem ser conferidos no arquivo `Captura de tela 2026-06-19 154433.png`.
 
 ---
