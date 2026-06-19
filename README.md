@@ -1,7 +1,7 @@
 # Snyk + SonarQube
 ## Ferramentas de Segurança e Qualidade no DevSecOps
 
->**Trabalho da disciplina de Engenharia de Software** > **Ferramentas:** Snyk e SonarQube | **Tema:** DevSecOps | **Turma:** Sexta-feira
+>**Trabalho da disciplina de Engenharia de Software**  **Ferramentas:** Snyk e SonarQube | **Tema:** DevSecOps | **Turma:** Sexta-feira
 
 
 ## Sumário
@@ -75,7 +75,7 @@ Em um pipeline de DevSecOps maduro, as ferramentas se complementam:
 * **SonarQube** -> Primeira linha de defesa. Evita que o desenvolvedor cometa erros de lógica, segurança ou boas práticas no código que ele mesmo escreve.
 * **Snyk** -> Especialista em cadeia de suprimentos. Garante que as bibliotecas externas utilizadas não tragam vulnerabilidades conhecidas para o projeto.
 
-> ✨ **Cenário ideal:** **SNYK** + **SONARQUBE** trabalhando juntos no pipeline CI/CD.
+> **Cenário ideal:** **SNYK** + **SONARQUBE** trabalhando juntos no pipeline CI/CD.
 
 ---
 
@@ -103,9 +103,6 @@ O fluxo da demonstração foi estruturado nos seguintes passos:
 
 ![Demonstração Funcional](demonstracao.png)
 
-> **Nota:** O resultado visual desta etapa e a validação do dashboard podem ser conferidos no arquivo `Captura de tela 2026-06-19 154433.png`.
-
----
 
 ##  Dificuldades Encontradas
 
@@ -136,7 +133,7 @@ O trabalho demonstrou que o **Snyk** e o **SonarQube** são ferramentas compleme
 
 Recomendamos o uso de ambas as ferramentas em projetos de médio e grande porte, especialmente aqueles desenvolvidos em equipe, onde garantir a segurança e a evolução sustentável do software é essencial. O investimento em configuração e aprendizado é amplamente compensado pela **redução de riscos** e pela **automação** da detecção de problemas.
 
-> 🛡️ **Mensagem final:** No DevSecOps, a segurança não é uma etapa final — é um processo contínuo que começa na primeira linha de código.
+>  **Mensagem final:** No DevSecOps, a segurança não é uma etapa final — é um processo contínuo que começa na primeira linha de código.
 
 
 ## Referências
